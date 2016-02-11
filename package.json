@@ -1,0 +1,23 @@
+{
+  "name": "react-native-dismiss-keyboard",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joknelid/react-native-dismiss-keyboard.git"
+  },
+  "nativePackage": true,
+  "description": "Dismiss the keyboard on iOS or Android",
+  "author": {
+    "name": "Jens Oknelid",
+    "email": "jens.oknelid@gmail.com"
+  },
+  "homepage": "https://github.com/joknelid/react-native-dismiss-keyboard",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "keyboard"
+  ],
+  "peerDependencies": {
+    "react-native": ">=0.19.0"
+  }
+}
