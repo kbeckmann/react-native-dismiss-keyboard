@@ -17,11 +17,8 @@ import java.util.Map;
 
 public class DismissKeyboardModule extends ReactContextBaseJavaModule {
 
-  private Activity mActivity;
-
-  public DismissKeyboardModule(ReactApplicationContext reactContext, Activity activity) {
+  public DismissKeyboardModule(ReactApplicationContext reactContext) {
     super(reactContext);
-    mActivity = activity;
   }
 
   @Override
@@ -35,7 +32,7 @@ public class DismissKeyboardModule extends ReactContextBaseJavaModule {
 
       InputMethodManager imm = (InputMethodManager)getReactApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
       if (imm.isAcceptingText()) {
-        IBinder windowToken = mActivity.getWindow().getDecorView().getRootView().getWindowToken();
+        IBinder windowToken = getCurrentActivity().getWindow().getDecorView().getRootView().getWindowToken();
         imm.hideSoftInputFromWindow(windowToken, 0);
       }
   }

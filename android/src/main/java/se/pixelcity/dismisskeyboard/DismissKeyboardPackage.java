@@ -11,17 +11,14 @@ import com.facebook.react.uimanager.ViewManager;
 
 public class DismissKeyboardPackage implements ReactPackage {
 
-  private Activity mActivity;
-
-  public DismissKeyboardPackage(Activity activity) {
-    mActivity = activity;
+  public DismissKeyboardPackage() {
   }
 
   @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
 
-    modules.add(new DismissKeyboardModule(reactContext, mActivity));
+    modules.add(new DismissKeyboardModule(reactContext));
     return modules;
   }
 
